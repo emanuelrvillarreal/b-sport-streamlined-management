@@ -10,6 +10,7 @@ import {
   Building2,
   Dumbbell,
   MapPin,
+  GraduationCap,
   CheckCircle,
   ArrowRight,
   Menu,
@@ -446,9 +447,9 @@ function Features() {
     },
     {
       icon: Trophy,
-      title: "Actividades y reservas",
+      title: "Actividades, reservas y amenities",
       description:
-        "Inscripciones, cupos, categorías, reserva de espacios y amenities desde un solo lugar.",
+        "Inscripciones, cupos, categorías, reserva de espacios y amenities. Integrado con Mercado Pago para cobros simples y seguros.",
     },
     {
       icon: Bell,
@@ -491,7 +492,7 @@ function Audience() {
           title="Se adapta a tu institución"
           subtitle="Cada organización es distinta. Por eso B Sport se adapta al tipo de institución, ofreciendo las herramientas que realmente necesita."
         />
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           <AudienceCard
             icon={Building2}
             title="Clubes"
@@ -506,6 +507,11 @@ function Audience() {
             icon={MapPin}
             title="Canchas"
             description="Reservas, turnos y cobros simplificados para complejos deportivos y alquileres."
+          />
+          <AudienceCard
+            icon={GraduationCap}
+            title="Escuelas deportivas"
+            description="Gestión de alumnos, profesores, grupos por edad, categorías y seguimiento de pagos."
           />
         </div>
       </div>
@@ -527,7 +533,7 @@ function Benefits() {
             <div className="mt-8 space-y-6">
               <BenefitItem text="Todo en un solo lugar: se acabaron las planillas sueltas y los sistemas desconectados." />
               <BenefitItem text="Menos carga operativa, más tiempo para el deporte y tus socios." />
-              <BenefitItem text="Se adapta a tu institución, no al revés. Clubes, gimnasios y canchas." />
+              <BenefitItem text="Se adapta a tu institución, no al revés. Clubes, gimnasios, canchas y escuelas deportivas." />
               <BenefitItem text="Pensado y desarrollado en Argentina, con soporte cercano y real." />
             </div>
           </div>
