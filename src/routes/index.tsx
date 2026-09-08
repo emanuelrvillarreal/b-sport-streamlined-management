@@ -329,7 +329,10 @@ function Hero() {
               Plataforma SaaS para clubes deportivos
             </span>
             <h1 className="text-balance text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              B Sport
+              <Logo
+                variant="full"
+                className="h-16 w-auto md:h-20 lg:h-24"
+              />
             </h1>
             <p className="mt-4 text-balance text-2xl font-semibold text-primary sm:text-3xl">
               App de gestión integral para clubes deportivos
