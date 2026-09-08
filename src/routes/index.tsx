@@ -449,7 +449,13 @@ function Features() {
       icon: Trophy,
       title: "Actividades, reservas y amenities",
       description:
-        "Inscripciones, cupos, categorías, reserva de espacios y amenities. Integrado con Mercado Pago para cobros simples y seguros.",
+        "Inscripciones, cupos, categorías, reserva de espacios y amenities desde un solo lugar.",
+    },
+    {
+      icon: CreditCard,
+      title: "Cobros con Mercado Pago",
+      description:
+        "Integración con Mercado Pago para cobros simples, seguros y automatizados: tarjetas, dinero en cuenta y cuotas.",
     },
     {
       icon: Bell,
