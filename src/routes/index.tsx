@@ -357,14 +357,31 @@ function Hero() {
           </div>
 
           <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border bg-card shadow-2xl shadow-primary/10">
-              <img
-                src={dashboardAsset.url}
-                alt="Dashboard de B Sport"
-                className="h-full w-full object-cover object-left-top"
-                loading="eager"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10" />
+            <div className="relative mx-auto w-full max-w-4xl">
+              {/* Laptop screen frame */}
+              <div className="relative overflow-hidden rounded-t-2xl border-[6px] border-card bg-card shadow-2xl shadow-primary/20 md:rounded-t-3xl md:border-[10px]">
+                {/* Browser bar */}
+                <div className="flex items-center gap-1.5 bg-muted px-3 py-2 md:gap-2 md:px-4 md:py-3">
+                  <div className="h-2.5 w-2.5 rounded-full bg-destructive/80 md:h-3 md:w-3" />
+                  <div className="h-2.5 w-2.5 rounded-full bg-accent/80 md:h-3 md:w-3" />
+                  <div className="h-2.5 w-2.5 rounded-full bg-primary/80 md:h-3 md:w-3" />
+                  <div className="ml-3 hidden flex-1 rounded-md bg-background/80 px-3 py-1 text-xs text-muted-foreground sm:block">
+                    bsport.app/panel
+                  </div>
+                </div>
+                {/* Dashboard image */}
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-card">
+                  <img
+                    src={dashboardAsset.url}
+                    alt="Dashboard de B Sport"
+                    className="h-full w-full object-cover object-left-top"
+                    loading="eager"
+                  />
+                </div>
+              </div>
+              {/* Laptop hinge & base */}
+              <div className="relative mx-auto h-2 w-[70%] rounded-b-sm bg-gradient-to-b from-border to-muted md:h-3" />
+              <div className="absolute -bottom-6 left-1/2 h-6 w-[85%] -translate-x-1/2 rounded-[100%] bg-primary/10 blur-xl" />
             </div>
           </div>
         </div>
