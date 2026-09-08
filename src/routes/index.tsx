@@ -93,7 +93,7 @@ function Logo({
     <img
       src={asset.url}
       alt="B Sport"
-      className={`h-auto object-contain ${className}`}
+      className={`object-contain ${className}`}
     />
   );
 }
