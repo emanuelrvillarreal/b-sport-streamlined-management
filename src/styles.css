@@ -176,8 +176,8 @@
 @utility gradient-hero {
   background: linear-gradient(
     135deg,
-    oklch(0.99 0.003 258) 0%,
-    oklch(0.96 0.015 258) 50%,
-    oklch(0.92 0.02 258) 100%
+    oklch(1 0 0) 0%,
+    oklch(0.96 0.01 263) 50%,
+    oklch(0.92 0.015 263) 100%
   );
 }
