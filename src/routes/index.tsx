@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import fullLogoAsset from "../assets/bsport-logo.png.asset.json";
 import iconLogoAsset from "../assets/bsport-logo-icon.png.asset.json";
+import dashboardAsset from "../assets/bsport-dashboard.png.asset.json";
 
 const WHATSAPP_NUMBER = "5491143991220";
 const WHATSAPP_MESSAGE = "Hola, quiero conocer más sobre B Sport";
@@ -357,66 +358,13 @@ function Hero() {
 
           <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border bg-card shadow-2xl shadow-primary/10">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-              <div className="flex h-full flex-col p-6 md:p-8">
-                <div className="mb-4 flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">
-                      B
-                    </div>
-                    <span className="font-bold text-card-foreground">B Sport</span>
-                  </div>
-                  <div className="flex gap-2">
-                    <div className="h-3 w-3 rounded-full bg-destructive/80" />
-                    <div className="h-3 w-3 rounded-full bg-accent/80" />
-                    <div className="h-3 w-3 rounded-full bg-primary/80" />
-                  </div>
-                </div>
-                <div className="grid flex-1 grid-cols-2 gap-3">
-                  <div className="col-span-2 rounded-xl bg-muted p-4">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                      Socios activos
-                    </p>
-                    <p className="mt-1 text-3xl font-extrabold text-foreground">
-                      1,248
-                    </p>
-                    <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-border">
-                      <div className="h-full w-3/4 rounded-full bg-primary" />
-                    </div>
-                  </div>
-                  <div className="rounded-xl bg-muted p-4">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                      Cuotas
-                    </p>
-                    <p className="mt-1 text-2xl font-extrabold text-foreground">
-                      96%
-                    </p>
-                    <p className="text-xs text-muted-foreground">al día</p>
-                  </div>
-                  <div className="rounded-xl bg-muted p-4">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                      Clases hoy
-                    </p>
-                    <p className="mt-1 text-2xl font-extrabold text-foreground">
-                      34
-                    </p>
-                    <p className="text-xs text-muted-foreground">activas</p>
-                  </div>
-                  <div className="col-span-2 rounded-xl bg-primary p-4 text-primary-foreground">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-wide opacity-90">
-                          Próximo recordatorio
-                        </p>
-                        <p className="mt-1 font-semibold">
-                          Vencimiento de cuotas
-                        </p>
-                      </div>
-                      <Bell size={24} />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <img
+                src={dashboardAsset.url}
+                alt="Dashboard de B Sport"
+                className="h-full w-full object-cover object-left-top"
+                loading="eager"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10" />
             </div>
           </div>
         </div>
@@ -441,7 +389,7 @@ function Features() {
     },
     {
       icon: CalendarDays,
-      title: "Gestión de instructores",
+      title: "Profesores",
       description:
         "Asignación a actividades, horarios, disponibilidad y seguimiento centralizado del equipo.",
     },
