@@ -600,10 +600,12 @@ function HowItWorks() {
 
 function FinalCTA() {
   return (
-    <section id="contacto" className="relative overflow-hidden bg-primary py-20 md:py-28">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,oklch(0.6_0.16_250)_0%,oklch(0.5_0.16_250)_100%)]" />
+    <section
+      id="contacto"
+      className="relative overflow-hidden bg-gradient-to-br from-primary to-secondary py-20 md:py-28"
+    >
       <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
-      <div className="absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-accent/20 blur-3xl" />
+      <div className="absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="text-balance text-3xl font-extrabold tracking-tight text-primary-foreground md:text-4xl lg:text-5xl">
