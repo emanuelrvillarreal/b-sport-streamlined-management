@@ -5,7 +5,6 @@ import {
   CreditCard,
   CalendarDays,
   Trophy,
-  Bell,
   BarChart3,
   Building2,
   Dumbbell,
@@ -421,12 +420,6 @@ function Features() {
       title: "Cobros con Mercado Pago",
       description:
         "Integración con Mercado Pago para cobros simples, seguros y automatizados: tarjetas, dinero en cuenta y cuotas.",
-    },
-    {
-      icon: Bell,
-      title: "Eventos y comunicaciones",
-      description:
-        "Notificaciones vía WhatsApp, consentimientos digitales y avisos masivos a socios.",
     },
     {
       icon: BarChart3,
