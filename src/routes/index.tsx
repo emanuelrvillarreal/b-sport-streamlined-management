@@ -19,7 +19,8 @@ import {
   SlidersHorizontal,
   MapPinned,
 } from "lucide-react";
-import logoAsset from "../assets/bsport-logo.png.asset.json";
+import fullLogoAsset from "../assets/bsport-logo.png.asset.json";
+import iconLogoAsset from "../assets/bsport-logo-icon.png.asset.json";
 
 const WHATSAPP_NUMBER = "5491143991220";
 const WHATSAPP_MESSAGE = "Hola, quiero conocer más sobre B Sport";
