@@ -262,7 +262,7 @@ function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center">
-          <Logo className="h-10 w-auto md:h-12" />
+          <Logo variant="icon" className="h-10 w-auto md:h-12" />
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
