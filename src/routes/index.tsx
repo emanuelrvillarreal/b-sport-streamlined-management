@@ -12,19 +12,38 @@ import {
   MapPin,
   CheckCircle,
   ArrowRight,
-  MessageCircle,
   Menu,
   X,
   ShieldCheck,
   Clock,
   SlidersHorizontal,
-  MapPinHouse,
-  ChevronRight,
+  MapPinned,
 } from "lucide-react";
+import logoAsset from "../assets/bsport-logo.png.asset.json";
 
 const WHATSAPP_NUMBER = "5491143991220";
 const WHATSAPP_MESSAGE = "Hola, quiero conocer más sobre B Sport";
 const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+
+function WhatsAppIcon({ size = 24 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path d="M17.472 9.747c-.233-.615-1.169-1.14-1.862-1.14h-.003c-.233 0-.466.035-.669.14-.267.14-.502.385-.641.653-.14.267-.21.502-.21.77 0 .267.07.536.21.77.14.268.374.513.641.653.203.105.436.14.669.14.693 0 1.629-.525 1.862-1.14v.004zM12.876 10.553c.233 0 .466-.035.669-.14.268-.14.502-.385.641-.653.14-.267.21-.502.21-.77 0-.267-.07-.536-.21-.77-.14-.268-.374-.513-.641-.653-.203-.105-.436-.14-.669-.14h-.003c-.693 0-1.629.525-1.862 1.14-.233.615.233 1.283.926 1.283.21 0 .43-.018.64-.097z" />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.06 2.284 7.045L.762 23.553l4.853-1.318A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm6.54 16.74c-.262.74-1.529 1.355-2.128 1.446-.57.086-1.146.15-3.404-.733-2.876-1.18-4.713-4.134-4.852-4.333-.138-.198-1.16-1.543-1.16-2.943 0-1.4.733-2.083.992-2.37.26-.286.57-.37.76-.37.19 0 .38.003.547.006.175.002.41-.066.64.49.228.553.78 1.917.848 2.057.069.14.115.303.023.49-.092.186-.138.303-.276.467-.138.163-.29.343-.415.462-.138.13-.282.272-.122.534.16.262.71 1.17 1.524 1.893 1.045.928 1.92 1.216 2.186 1.348.267.133.422.11.578-.066.156-.176.668-.78.846-1.048.178-.267.356-.222.594-.133.238.09 1.533.72 1.796.85.262.13.437.196.502.306.064.11.064.638-.198 1.378z"
+      />
+    </svg>
+  );
+}
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -60,6 +79,16 @@ const navLinks = [
   { label: "Cómo funciona", href: "#como-funciona" },
   { label: "Contacto", href: "#contacto" },
 ];
+
+function Logo({ className = "" }: { className?: string }) {
+  return (
+    <img
+      src={logoAsset.url}
+      alt="B Sport"
+      className={`h-auto object-contain ${className}`}
+    />
+  );
+}
 
 function WhatsAppButton({
   children,
@@ -223,12 +252,9 @@ function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2 text-2xl font-extrabold text-foreground">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            B
-          </span>
-          <span>Sport</span>
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <Link to="/" className="flex items-center">
+          <Logo className="h-10 w-auto md:h-12" />
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -242,7 +268,7 @@ function Navbar() {
             </a>
           ))}
           <WhatsAppButton variant="primary" size="sm">
-            <MessageCircle size={18} />
+            <WhatsAppIcon size={18} />
             Hablemos
           </WhatsAppButton>
         </div>
@@ -272,7 +298,7 @@ function Navbar() {
               </a>
             ))}
             <WhatsAppButton variant="primary" size="md" className="w-full">
-              <MessageCircle size={20} />
+              <WhatsAppIcon size={20} />
               Hablemos por WhatsApp
             </WhatsAppButton>
           </div>
@@ -286,7 +312,7 @@ function Hero() {
   return (
     <section
       id="inicio"
-      className="relative overflow-hidden gradient-hero pb-20 pt-32 md:pt-40"
+      className="relative overflow-hidden gradient-hero pb-20 pt-28 md:pt-40"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -307,7 +333,7 @@ function Hero() {
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <WhatsAppButton variant="accent" size="lg" className="w-full sm:w-auto">
-                <MessageCircle size={22} />
+                <WhatsAppIcon size={22} />
                 Hablemos por WhatsApp
               </WhatsAppButton>
               <a
@@ -543,7 +569,7 @@ function Benefits() {
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="shrink-0 rounded-xl bg-accent/10 p-3 text-accent">
-                    <MapPinHouse size={28} />
+                    <MapPinned size={28} />
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-card-foreground">
@@ -615,7 +641,7 @@ function FinalCTA() {
             size="lg"
             className="bg-white text-primary hover:bg-white/90"
           >
-            <MessageCircle size={24} />
+            <WhatsAppIcon size={24} />
             Escribinos por WhatsApp
           </WhatsAppButton>
         </div>
@@ -629,14 +655,8 @@ function Footer() {
     <footer className="border-t border-border bg-background py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-          <Link
-            to="/"
-            className="flex items-center gap-2 text-2xl font-extrabold text-foreground"
-          >
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground">
-              B
-            </span>
-            <span>B Sport</span>
+          <Link to="/" className="flex items-center">
+            <Logo className="h-10 w-auto" />
           </Link>
 
           <div className="flex flex-col items-center gap-2 text-sm text-muted-foreground md:flex-row md:gap-6">
@@ -646,7 +666,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-medium text-foreground hover:text-primary"
             >
-              <MessageCircle size={18} />
+              <WhatsAppIcon size={18} />
               WhatsApp: +54 9 11 4399-1220
             </a>
             <span className="hidden md:inline">·</span>
@@ -671,7 +691,7 @@ function FloatingWhatsApp() {
       aria-label="Contactar por WhatsApp"
       className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/20 transition-transform hover:scale-110 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
     >
-      <MessageCircle size={28} fill="currentColor" />
+      <WhatsAppIcon size={28} />
     </a>
   );
 }
