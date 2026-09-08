@@ -81,10 +81,17 @@ const navLinks = [
   { label: "Contacto", href: "#contacto" },
 ];
 
-function Logo({ className = "" }: { className?: string }) {
+function Logo({
+  variant = "full",
+  className = "",
+}: {
+  variant?: "full" | "icon";
+  className?: string;
+}) {
+  const asset = variant === "icon" ? iconLogoAsset : fullLogoAsset;
   return (
     <img
-      src={logoAsset.url}
+      src={asset.url}
       alt="B Sport"
       className={`h-auto object-contain ${className}`}
     />
